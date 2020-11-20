@@ -20,7 +20,7 @@ var saveBtnDiv;
 // create schedule for standard business hours - defined as 9 AM > 6 PM ( checked offical way to display AM/PM)
 
 // hour rows
-var hourSlots = ["9 ", "10 ", "11 ", "12 ", "13 "," 14 ","15 ", "16 ","17 ","18 "];
+var hourSlots = [" 9 ", "10", "11", "12", "13","14","15", "16","17","18"];
 
 
 // row blocks of 1 hour with columns off time/input box /save
@@ -35,6 +35,16 @@ for ( i = 0; i < hourSlots.length; i++){
     //added a <div id="schedule" in the HTML
     $(rows).append(timeColumn).append(inputColumn).append(SaveColumn)
     $("#schedule").append(rows)
+
+    if (hourSlots < currentHour){
+        inputColumn.addClass("past");
+    } 
+    else if (hourSlots > currentHour){
+       inputColumn.addClass("future");
+    } 
+    else {
+        inputColumn.addClass("present");
+    }
 }
 
 
@@ -46,15 +56,7 @@ for ( i = 0; i < hourSlots.length; i++){
 
 // time blocks will need to be compared to current time |(if loop) and then do something - change colour- past, present, future
  
-if (hourSlots < currentHour){
-    inputColumn.addClass("past");
-} 
-else if (hourSlots === currentHour){
-   inputColumn.addClass("present");
-} 
-else {
-    inputColumn.addClass("future");
-}
+
 
 
 
