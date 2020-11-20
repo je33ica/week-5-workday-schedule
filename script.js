@@ -21,7 +21,16 @@ var saveBtnDiv;
 
 // hour rows
 var hourSlots = ["9 AM", "10 AM", "11 AM", "12 PM", "1 PM","2 PM","3 PM", "4 PM","5 PM","6 PM"];
-var timeColumn;
+
+var rows;
+for ( i = 0; i < hourSlots.length; i++){
+ var rows = $("<div>").addClass("row");
+ //var timeColumn = $("<text-area>").text[i].addClass("hour");
+ console.log(rows);
+}
+
+
+
 var inputColumn;
 var SaveColumn;
 
@@ -44,11 +53,11 @@ var SaveColumn;
 
 
 //things that are styled in CSS 
-description 
-time-block
-row 
-hour
-past 
-present 
-future 
-saveBtn 
+// description 
+// time-block
+// row 
+// hour
+// past 
+// present 
+// future 
+// saveBtn 
