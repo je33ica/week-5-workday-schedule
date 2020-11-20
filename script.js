@@ -17,33 +17,27 @@ var dateAndTimeNow = moment().format('dddd, MMMM Do, h:mm:a');
 var timeDiv;
 var toDoDiv;
 var saveBtnDiv;
-// create schedule for standard business hours - defined as 9 AM > 5 PM ( checked offical way to display AM/PM)
+// create schedule for standard business hours - defined as 9 AM > 6 PM ( checked offical way to display AM/PM)
 
 // hour rows
-var hourSlots = ["9 AM", "10 AM", "11 AM", "12 PM", "1 PM","2 PM","3 PM", "4 PM","5 PM","6 PM"];
+var hourSlots = ["9 AM ", "10 AM", "11 AM", "12 PM", "1 PM ","2 PM ","3 PM ", "4 PM ","5 PM ","6 PM "];
 
+
+// row blocks of 1 hour with columns off time/input box /save
 var rows;
 for ( i = 0; i < hourSlots.length; i++){
     var rows = $("<div>").addClass("row");
-    var timeColumn = $("<div>").addClass("hour").text[i];
-    
-    var inputColumn = $("<input>").addClass("time-block")
-    var SaveColumn = $("<button>").addClass("saveBtn")
+    var timeColumn = $("<div>").text(hourSlots[i]).addClass("hour");
+    //had to ammend "time-block" width in CSS
+    var inputColumn = $("<input>").attr("placeholder", "Add to do here").addClass("time-block");
+    var SaveColumn = $("<button>").addClass("saveBtn").text(" save ")
     //these have been created and need to be append to an elment in the HTML to be included in the DOM
-    //added a div with the id of schedule in the HTML
+    //added a <div id="schedule" in the HTML
     $(rows).append(timeColumn).append(inputColumn).append(SaveColumn)
     $("#schedule").append(rows)
 }
 
 
-
-
-
-
-
-
-
-// row blocks of 1 hour with columns off time/input box /save
 
 // time blocks can be clicked
 //                     event added
