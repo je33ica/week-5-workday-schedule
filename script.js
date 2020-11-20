@@ -7,8 +7,25 @@ var currentHour = moment().format("H");
 console.log(currentDate);
 console.log(currentHour);
 
+ //would like to be able for time to update- setInterval?
+var dateAndTimeNow = moment().format('dddd, MMMM Do, h:mm:a');
+    document.getElementById("currentDay").innerHTML = dateAndTimeNow;
+    console.log(dateAndTimeNow);
 
-// create schdule for standard business hours - defined as 9 AM > 5 PM ( checked offical way to display AM/PM)
+
+// divs that need to be dynamically created
+var timeDiv;
+var toDoDiv;
+var saveBtnDiv;
+// create schedule for standard business hours - defined as 9 AM > 5 PM ( checked offical way to display AM/PM)
+
+// hour rows
+var hourSlots = ["9 AM", "10 AM", "11 AM", "12 PM", "1 PM","2 PM","3 PM", "4 PM","5 PM","6 PM"];
+var timeColumn;
+var inputColumn;
+var SaveColumn;
+
+
 
 // row blocks of 1 hour with columns off time/input box /save
 
@@ -24,3 +41,14 @@ console.log(currentHour);
 // future
 
 // all needs to be dynamically created in javascript
+
+
+//things that are styled in CSS 
+description 
+time-block
+row 
+hour
+past 
+present 
+future 
+saveBtn 
