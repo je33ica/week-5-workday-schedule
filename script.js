@@ -8,7 +8,7 @@ console.log(currentDate);
 console.log(currentHour);
 
  //would like to be able for time to update- setInterval?
-var dateAndTimeNow = moment().format('dddd, MMMM Do, h:mm:a');
+var dateAndTimeNow = moment().format('dddd, MMMM Do, H:mm');
     document.getElementById("currentDay").innerHTML = dateAndTimeNow;
     console.log(dateAndTimeNow);
 
@@ -20,7 +20,7 @@ var saveBtnDiv;
 // create schedule for standard business hours - defined as 9 AM > 6 PM ( checked offical way to display AM/PM)
 
 // hour rows
-var hourSlots = ["9 AM ", "10 AM", "11 AM", "12 PM", "1 PM ","2 PM ","3 PM ", "4 PM ","5 PM ","6 PM "];
+var hourSlots = ["9 ", "10 ", "11 ", "12 ", "13 "," 14 ","15 ", "16 ","17 ","18 "];
 
 
 // row blocks of 1 hour with columns off time/input box /save
@@ -40,17 +40,23 @@ for ( i = 0; i < hourSlots.length; i++){
 
 
 // time blocks can be clicked
-//                     event added
+//                     event added "input column" and "save" button is clicked
 //                     event saved in local storage 
 
 
-// time blocks will need to be compared to current time |(if loop)
-// and then do something - change colour
-// past - 
-// present 
-// future
+// time blocks will need to be compared to current time |(if loop) and then do something - change colour- past, present, future
+ 
+if (hourSlots < currentHour){
+    inputColumn.addClass("past");
+} 
+else if (hourSlots === currentHour){
+   inputColumn.addClass("present");
+} 
+else {
+    inputColumn.addClass("future");
+}
 
-// all needs to be dynamically created in javascript
+
 
 
 //things that are styled in CSS 
