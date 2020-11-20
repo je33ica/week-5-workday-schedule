@@ -24,15 +24,22 @@ var hourSlots = ["9 AM", "10 AM", "11 AM", "12 PM", "1 PM","2 PM","3 PM", "4 PM"
 
 var rows;
 for ( i = 0; i < hourSlots.length; i++){
- var rows = $("<div>").addClass("row");
- //var timeColumn = $("<text-area>").text[i].addClass("hour");
- console.log(rows);
+    var rows = $("<div>").addClass("row");
+    var timeColumn = $("<div>").addClass("hour").text[i];
+    
+    var inputColumn = $("<input>").addClass("time-block")
+    var SaveColumn = $("<button>").addClass("saveBtn")
+    //these have been created and need to be append to an elment in the HTML to be included in the DOM
+    //added a div with the id of schedule in the HTML
+    $(rows).append(timeColumn).append(inputColumn).append(SaveColumn)
+    $("#schedule").append(rows)
 }
 
 
 
-var inputColumn;
-var SaveColumn;
+
+
+
 
 
 
