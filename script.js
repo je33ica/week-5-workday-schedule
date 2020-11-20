@@ -1,6 +1,12 @@
 
 // get current day, date & time 
 //current day is shown at the top of the page
+var currentDay = $("#currentDay");
+var currentDate = moment().format("dddd, MMMM Do");
+var currentHour = moment().format("H");
+console.log(currentDate);
+console.log(currentHour);
+
 
 // create schdule for standard business hours - defined as 9 AM > 5 PM ( checked offical way to display AM/PM)
 
