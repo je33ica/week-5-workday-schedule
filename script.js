@@ -1,5 +1,5 @@
 
-// get current day, date & time 
+// get current day, date & time
 //current day is shown at the top of the page
 var currentDay = $("#currentDay");
 var currentDate = moment().format("dddd, MMMM Do");
@@ -20,53 +20,61 @@ var saveBtnDiv;
 // create schedule for standard business hours - defined as 9 AM > 6 PM ( checked offical way to display AM/PM)
 
 // hour rows
-var hourSlots = [" 9 ", "10", "11", "12", "13","14","15", "16","17","18"];
+var hourSlots = ["9","10","11","12","13","14","15","16","17","18"];
+
+
 
 
 // row blocks of 1 hour with columns off time/input box /save
 var rows;
 for ( i = 0; i < hourSlots.length; i++){
+    var hour = hourSlots[i]
     var rows = $("<div>").addClass("row");
-    var timeColumn = $("<div>").text(hourSlots[i]).addClass("hour");
+    var timeColumn = $("<div>").text(hour).addClass("hour");
     //had to ammend "time-block" width in CSS
     var inputColumn = $("<input>").attr("placeholder", "Add to do here").addClass("time-block");
-    var SaveColumn = $("<button>").addClass("saveBtn").text(" save ")
+    var SaveColumn = $("<button>").addClass("saveBtn saveBtn i:hover").text(" save ")
     //these have been created and need to be append to an elment in the HTML to be included in the DOM
     //added a <div id="schedule" in the HTML
     $(rows).append(timeColumn).append(inputColumn).append(SaveColumn)
     $("#schedule").append(rows)
 
-    if (hourSlots < currentHour){
-        inputColumn.addClass("past");
-    } 
-    else if (hourSlots > currentHour){
-       inputColumn.addClass("future");
-    } 
-    else {
-        inputColumn.addClass("present");
-    }
-}
+        if (parseInt(hour) < currentHour){
+            inputColumn.addClass("past")//.removeClass("future present");
+        }
+        else if (parseInt(hour) > currentHour){
+        inputColumn.addClass("future")//.removeClass("present past");
+        }
+        else {
+            inputColumn.addClass("present");
+        }
+  }
+
+
+  
 
 
 
 // time blocks can be clicked
 //                     event added "input column" and "save" button is clicked
-//                     event saved in local storage 
+//                     event saved in local storage
+
+
 
 
 // time blocks will need to be compared to current time |(if loop) and then do something - change colour- past, present, future
- 
 
 
 
 
 
-//things that are styled in CSS 
-// description 
+
+//things that are styled in CSS
+// description
 // time-block
-// row 
+// row
 // hour
-// past 
-// present 
-// future 
-// saveBtn 
+// past
+// present
+// future
+// saveBtn
