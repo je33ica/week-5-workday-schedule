@@ -74,7 +74,19 @@ var task = $(this).siblings("#userInput").val();
    localStorage.setItem(timeBlockId,task)
     
  })
-
+ 
+ $("#09 #userInput").val(localStorage.getItem("09"))
+ $("#10 #userInput").val(localStorage.getItem("10"))
+ $("#11 #userInput").val(localStorage.getItem("11"))
+ $("#12 #userInput").val(localStorage.getItem("12"))
+ $("#13 #userInput").val(localStorage.getItem("13"))
+ $("#14 #userInput").val(localStorage.getItem("14"))
+ $("#15 #userInput").val(localStorage.getItem("15"))
+ $("#16 #userInput").val(localStorage.getItem("16"))
+ $("#17 #userInput").val(localStorage.getItem("17"))
+ $("#18 #userInput").val(localStorage.getItem("18"))
+ 
+ })
 // //var userInput = ("hello")
 // $("#userInput").val();
 
