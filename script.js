@@ -12,8 +12,13 @@ if (currentHour > 19){
 
 //would like to be able for time to update- setInterval?
 
-var dateAndTimeNow = moment().format('dddd, MMMM Do, H:mm');
-    document.getElementById("currentDay").innerHTML = dateAndTimeNow;
+function timeUpdate(){
+    var dateAndTimeNow = moment().format('dddd, MMMM Do, H:mm');
+        document.getElementById("currentDay").innerHTML = dateAndTimeNow;
+        
+    }
+    timeUpdate()
+    var Interval = setInterval(timeUpdate,1000)
     
 
 
@@ -74,7 +79,7 @@ var task = $(this).siblings("#userInput").val();
    localStorage.setItem(timeBlockId,task)
     
  })
- 
+
  $("#09 #userInput").val(localStorage.getItem("09"))
  $("#10 #userInput").val(localStorage.getItem("10"))
  $("#11 #userInput").val(localStorage.getItem("11"))
