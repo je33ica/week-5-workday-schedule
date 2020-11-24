@@ -2,6 +2,7 @@ body {
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
   line-height: 1;
+
 }
 
 textarea{
@@ -35,12 +36,22 @@ textarea{
   white-space: pre-wrap;
   height: 80px;
   border-top: 1px solid white;;
+  padding: 5px;
 }
 
 .hour {
-  background-color: #ffffff;
-  color: #000000;
-  border-top: 1px dashed #000000;
+  border: 1px solid black;
+ width: 10%;
+ height: 90%;
+  background-color: rgb(161, 225, 255);
+  color:black;
+  text-align: center;
+  vertical-align: center;
+  border-radius: 10%;
+ 
+  font-size: 20px;
+ 
+  
   
 }
 
@@ -61,8 +72,7 @@ textarea{
 
 .saveBtn {
   border-left: 1px solid black;
-  border-top-right-radius: 15px;
-  border-bottom-right-radius: 15px;
+  border-radius: 10%;
   background-color: #06AED5;
   color: white;
 }

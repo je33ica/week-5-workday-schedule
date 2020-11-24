@@ -15,6 +15,7 @@ function timeUpdate(){
     
 
 var hourSlots = ["09","10","11","12","13","14","15","16","17","18"];
+//hourSlots[0].padStart(2, "0")
 var rows;
 for ( i = 0; i < hourSlots.length; i++){
     var hour = hourSlots[i]
