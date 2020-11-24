@@ -9,5 +9,6 @@ Users input is saved in local storage, the local storage is cleared after the wo
 
 My aim was to keep the code as readable as possible whilst being succint 
 
+https://je33ica.github.io/week-5-workday-schedule/
  
 <img width="1169" alt="Screenshot 2020-11-22 at 18 55 31" src="https://user-images.githubusercontent.com/67834752/99914596-571c9500-2cf6-11eb-9574-2e4bf659382d.png">
